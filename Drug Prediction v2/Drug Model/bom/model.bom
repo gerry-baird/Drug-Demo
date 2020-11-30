@@ -1,0 +1,52 @@
+
+
+public class PatientData
+        property "ads.typeId" "1"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "Patient Data"
+        property "de.generated" "true"
+{
+    public java.lang.Long age1
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "age"
+                property update "true";
+    public double bmi
+                property "ads.attributeId" "4"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "bmi"
+                property update "true";
+    public string bp
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "bp"
+                property update "true";
+    public string gender1
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "gender"
+                property update "true";
+    public PatientData(java.lang.Long age1, double bmi, string bp, string gender1)
+                property autoExpand "true"
+                property groups "BALA"
+                property prototype "true";
+    public PatientData()
+                property "dataio.default" "true";
+}
+
+public class PredictiveModelResult
+        property "ads.typeId" "2"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "Predictive Model Result"
+        property "de.generated" "true"
+{
+    public string prediction
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "prediction"
+                property update "true";
+    public double probability
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "probability"
+                property update "true";
+    public PredictiveModelResult(string prediction, double probability)
+                property autoExpand "true"
+                property groups "BALA"
+                property prototype "true";
+    public PredictiveModelResult()
+                property "dataio.default" "true";
+}
+

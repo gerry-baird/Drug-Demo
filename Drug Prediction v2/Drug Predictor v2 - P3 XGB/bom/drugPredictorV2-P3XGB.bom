@@ -1,0 +1,75 @@
+
+package decisions.drug_demo.drug_prediction_v2.drugPredictorV2$002dP3XGB;
+
+
+public class Input
+        property "ads.typeId" "1"
+        property "com.fasterxml.jackson.annotation.JsonPropertyOrder" "{Age,Gender,BP,BMI}"
+        property "de.generated" "true"
+{
+    public java.lang.Long age
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Age";
+    public java.lang.Long bmi
+                property "ads.attributeId" "4"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "BMI";
+    public string bp
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "BP";
+    public string gender
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Gender";
+    public Input(java.lang.Long age, java.lang.Long bmi, string bp, string gender)
+                property autoExpand "true"
+                property groups "BALA"
+                property prototype "true";
+    public Input()
+                property "dataio.default" "true";
+}
+
+public class Output
+        property "ads.typeId" "2"
+        property "com.fasterxml.jackson.annotation.JsonIgnoreProperties" {
+            ignoreUnknown "true"
+        }
+        property "de.generated" "true"
+{
+    public string errorCode
+                property "ads.attributeId" "4"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "error_code";
+    public string errorMessage
+                property "ads.attributeId" "5"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "error_message";
+    public boolean inError
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "in_error";
+    public string prediction
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "prediction";
+    public java.lang.Double probability
+                property "ads.attributeId" "6"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "probability";
+    public Output(string errorCode, string errorMessage, boolean inError, string prediction, java.lang.Double probability, java.lang.Double probability)
+                property autoExpand "true"
+                property groups "BALA"
+                property prototype "true";
+    public Output()
+                property "dataio.default" "true";
+    public static Output run(decisions.drug_demo.drug_prediction_v2.drugPredictorV2$002dP3XGB.Input input)
+                property "de.generated" {
+                    $gen "com.ibm.decision.ml.integration.client.wml.xom.PredictionCallGenerator",
+                    $target "BOM",
+                    deploymentId "8b4011d5-d6ef-4c9e-ac19-37ec667cfee6",
+                    providerName "decisions/Drug-Demo/ML Deployment"
+                }
+                property pureFunction "true";
+    public static Output run(com.ibm.decision.run.RunContext runContext, decisions.drug_demo.drug_prediction_v2.drugPredictorV2$002dP3XGB.Input input)
+                property "de.generated" {
+                    $gen "com.ibm.decision.ml.integration.client.wml.xom.PredictionRunGenerator",
+                    $target "BOM",
+                    deploymentId "8b4011d5-d6ef-4c9e-ac19-37ec667cfee6",
+                    providerName "decisions/Drug-Demo/ML Deployment"
+                }
+                property pureFunction "true";
+}
+

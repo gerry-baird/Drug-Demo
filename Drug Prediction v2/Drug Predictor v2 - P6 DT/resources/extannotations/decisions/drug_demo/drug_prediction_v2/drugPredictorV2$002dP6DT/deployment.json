@@ -1,0 +1,36 @@
+{
+  "metadata" : {
+    "id" : "01655089-64aa-4a76-b3ba-e88882b5dc94",
+    "modified_at" : "2020-11-30T16:29:21.869Z",
+    "created_at" : "2020-11-30T16:29:21.869Z",
+    "owner" : "IBMid-27000280C5",
+    "space_id" : "31b44df7-2390-4375-88a2-65427c2faa6a",
+    "name" : "Drug Predictor v2 - P6 DT"
+  },
+  "entity" : {
+    "name" : "Drug Predictor v2 - P6 DT",
+    "custom" : { },
+    "online" : { },
+    "status" : {
+      "state" : "ready",
+      "online_url" : {
+        "url" : "https://eu-gb.ml.cloud.ibm.com/ml/v4/deployments/01655089-64aa-4a76-b3ba-e88882b5dc94/predictions"
+      }
+    },
+    "asset" : {
+      "id" : "3eb4db1f-0b85-403b-b1cb-299830cea05e"
+    },
+    "hybrid_pipeline_hardware_specs" : [ {
+      "hardware_spec" : {
+        "name" : "S",
+        "num_nodes" : 1
+      },
+      "node_runtime_id" : "auto_ai.kb"
+    } ],
+    "deployed_asset_type" : "model",
+    "space_id" : "31b44df7-2390-4375-88a2-65427c2faa6a"
+  },
+  "name" : "Drug Predictor v2 - P6 DT",
+  "status" : "ready",
+  "deployedAt" : "2020-11-30T16:29:21.869Z"
+}

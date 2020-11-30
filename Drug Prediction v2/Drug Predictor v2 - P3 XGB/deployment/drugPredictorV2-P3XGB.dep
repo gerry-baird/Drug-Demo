@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Deployment xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" ruleAppName="decisions.drug_demo.drug_prediction_v2:drugPredictorV2-P3XGB" ruleAppVersion="LATEST-SNAPSHOT" packageName="decisions.drug_demo.drug_prediction_v2.drugPredictorV2$002dP3XGB" managingXom="true">
+  <name>drugPredictorV2-P3XGB</name>
+  <uuid>10063c81-e313-4b59-8b00-8385810cf7e1</uuid>
+  <locales>en_US</locales>
+  <operations operationName="drugPredictorV2-P3XGB">
+    <operation href="drugPredictorV2-P3XGB.dop#4bb47f7f-0661-4b7b-93b7-6775d205fc66"/>
+    <properties key="ruleset.version">
+      <value><![CDATA[1.0]]></value>
+    </properties>
+  </operations>
+  <versionPolicies label="Increment minor version numbers" ruleset="INCREMENT_MINOR" default="true" recurrent="true">
+    <description><![CDATA[Updates the minor version for each ruleset. Makes the new version available but retains previous versions.]]></description>
+  </versionPolicies>
+  <versionPolicies label="Use the base version numbers" recurrent="true">
+    <description><![CDATA[Uses the numbers provided in the deployment configuration. Replaces the latest version of each ruleset with this release. Used for hot fixes or development.]]></description>
+  </versionPolicies>
+  <versionPolicies label="The user can define the version numbers" ruleset="MANUAL" recurrent="true">
+    <description><![CDATA[Allows you to enter your own version numbers. Used for hot fixes or updates to an earlier release.]]></description>
+  </versionPolicies>
+</com.ibm.rules.studio.model.decisionservice:Deployment>

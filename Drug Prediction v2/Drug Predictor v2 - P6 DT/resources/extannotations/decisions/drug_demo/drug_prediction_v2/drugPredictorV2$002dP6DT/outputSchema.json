@@ -1,0 +1,12 @@
+{
+  "id" : "default_schema_id",
+  "fields" : [ {
+    "name" : "prediction",
+    "type" : "string",
+    "nullable" : true
+  }, {
+    "name" : "probability",
+    "type" : "double",
+    "nullable" : true
+  } ]
+}

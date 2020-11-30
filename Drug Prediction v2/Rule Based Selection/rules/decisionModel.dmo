@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>bd28adc1-c55e-4f49-8855-7bd8cd029b79</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="diagram" namespace="">
+    <extensionElements>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <inputData id="node_0" name="Patient Details">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="PatientData" collection="false" name="Patient Details"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_0_ii" name="Patient Details" typeRef="PatientData"/>
+    </inputData>
+    <decision id="node_1" name="Drug Selection">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="PatientData" collection="false" name="Patient Details"/>
+                <output bomType="PredictiveModelResult" collection="false" name="Drug Selection"/>
+                <rule defaultRule="true" href="node_1/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+                <rule defaultRule="false" href="node_1/Older%20Females%20Low%20Confidence.drl" kind="BusinessRule" name="Older Females Low Confidence"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_1_ii" name="Drug Selection" typeRef="PredictiveModelResult"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+    </decision>
+</definitions></definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

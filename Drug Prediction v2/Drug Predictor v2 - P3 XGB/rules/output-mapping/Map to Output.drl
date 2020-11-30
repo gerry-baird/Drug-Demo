@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Map to Output</name>
+  <uuid>b84015ec-e65a-4674-a91a-bd00e852220d</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set decision to a new Predictive Model Result where
+        the prediction is the prediction of 'ML model invocation' , 
+        the probability is the probability of 'ML model invocation'  ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

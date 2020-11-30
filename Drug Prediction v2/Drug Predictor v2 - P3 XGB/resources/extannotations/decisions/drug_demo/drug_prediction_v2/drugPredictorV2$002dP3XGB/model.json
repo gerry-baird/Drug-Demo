@@ -1,0 +1,72 @@
+{
+  "metadata" : {
+    "id" : "f04f6912-fd49-40de-805a-55ca53c70a80",
+    "modified_at" : "2020-11-30T15:53:48.007Z",
+    "created_at" : "2020-11-30T15:53:47.596Z",
+    "owner" : "IBMid-27000280C5",
+    "space_id" : "31b44df7-2390-4375-88a2-65427c2faa6a",
+    "name" : "Drug Predictor v2 - P3 XGB"
+  },
+  "entity" : {
+    "training_data_references" : [ {
+      "type" : "s3",
+      "connection" : {
+        "access_key_id" : "51e1410a1d744944ac0c23f1be1b848a",
+        "secret_access_key" : "11fe2343a020482ea9eff6134fc1b8b32fcc044fa3a7f68a",
+        "endpoint_url" : "https://s3.eu-geo.objectstorage.softlayer.net",
+        "api_key" : "aVM1AHzotn9_bf9verNxWi_PqcuS0JIRtS2jrVH2qxrg",
+        "auth_endpoint" : "https://iam.bluemix.net/oidc/token/",
+        "service_instance_id" : "iam-ServiceId-ae791156-927b-4081-80cc-6178a75a07be"
+      },
+      "location" : {
+        "bucket" : "adsprojects-donotdelete-pr-1prc6pcq2p5o1w",
+        "type" : "s3",
+        "path" : "DrugV2Combined.csv"
+      }
+    } ],
+    "type" : "wml-hybrid_0.1",
+    "schemas" : {
+      "input" : [ {
+        "id" : "auto_ai_kb_input_schema",
+        "fields" : [ {
+          "name" : "Age",
+          "type" : "integer",
+          "nullable" : true
+        }, {
+          "name" : "Gender",
+          "type" : "other",
+          "nullable" : true
+        }, {
+          "name" : "BP",
+          "type" : "other",
+          "nullable" : true
+        }, {
+          "name" : "BMI",
+          "type" : "integer",
+          "nullable" : true
+        } ]
+      } ],
+      "output" : [ ]
+    },
+    "pipeline" : {
+      "id" : "08dbf10e-3ab7-48d4-88b3-35bccb5a41e9"
+    },
+    "content_import_state" : "completed",
+    "software_spec" : {
+      "id" : "8c1a58c6-62b5-4dc4-987a-df751c2756b6",
+      "name" : "hybrid_0.1"
+    },
+    "hybrid_pipeline_software_specs" : [ {
+      "id" : "632d4b22-10aa-5180-88f0-f52dfb6444d7",
+      "name" : "autoai-kb_3.1-py3.7"
+    } ]
+  },
+  "id" : "f04f6912-fd49-40de-805a-55ca53c70a80",
+  "name" : "Drug Predictor v2 - P3 XGB",
+  "description" : "",
+  "trainedAt" : "2020-11-30T15:53:47.596Z",
+  "modifiedAt" : "2020-11-30T15:53:48.007Z",
+  "system" : {
+    "warnings" : [ ]
+  }
+}

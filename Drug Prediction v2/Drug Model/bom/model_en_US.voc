@@ -1,0 +1,20 @@
+
+# PatientData
+PatientData#concept.label = Patient Data
+PatientData.PatientData(java.lang.Long,double,java.lang.String,java.lang.String)#phrase.navigation = a new {Patient Data} where {0, age} {1, bmi} {2, bp} {3, gender}
+PatientData.age1#phrase.action = set the age of {this} to {age}
+PatientData.age1#phrase.navigation = {age} of {this}
+PatientData.bmi#phrase.action = set the bmi of {this} to {bmi}
+PatientData.bmi#phrase.navigation = {bmi} of {this}
+PatientData.bp#phrase.action = set the bp of {this} to {bp}
+PatientData.bp#phrase.navigation = {bp} of {this}
+PatientData.gender1#phrase.action = set the gender of {this} to {gender}
+PatientData.gender1#phrase.navigation = {gender} of {this}
+
+# PredictiveModelResult
+PredictiveModelResult#concept.label = Predictive Model Result
+PredictiveModelResult.PredictiveModelResult(java.lang.String,double)#phrase.navigation = a new {Predictive Model Result} where {0, prediction} {1, probability}
+PredictiveModelResult.prediction#phrase.action = set the prediction of {this} to {prediction}
+PredictiveModelResult.prediction#phrase.navigation = {prediction} of {this}
+PredictiveModelResult.probability#phrase.action = set the probability of {this} to {probability}
+PredictiveModelResult.probability#phrase.navigation = {probability} of {this}

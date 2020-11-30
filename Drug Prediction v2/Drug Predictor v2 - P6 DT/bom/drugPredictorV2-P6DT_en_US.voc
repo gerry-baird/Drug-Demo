@@ -1,0 +1,27 @@
+
+# decisions.drug_demo.drug_prediction_v2.drugPredictorV2$002dP6DT.Input
+decisions.drug_demo.drug_prediction_v2.drugPredictorV2$002dP6DT.Input#concept.label = ML model input
+decisions.drug_demo.drug_prediction_v2.drugPredictorV2$002dP6DT.Input.Input(java.lang.Long,java.lang.Long,java.lang.String,java.lang.String)#phrase.navigation = a new {ML model input} where {0, age} {1, bmi} {2, bp} {3, gender} 
+decisions.drug_demo.drug_prediction_v2.drugPredictorV2$002dP6DT.Input.age#phrase.action = set the age of {this} to {age}
+decisions.drug_demo.drug_prediction_v2.drugPredictorV2$002dP6DT.Input.age#phrase.navigation = {age} of {this}
+decisions.drug_demo.drug_prediction_v2.drugPredictorV2$002dP6DT.Input.bmi#phrase.action = set the bmi of {this} to {bmi}
+decisions.drug_demo.drug_prediction_v2.drugPredictorV2$002dP6DT.Input.bmi#phrase.navigation = {bmi} of {this}
+decisions.drug_demo.drug_prediction_v2.drugPredictorV2$002dP6DT.Input.bp#phrase.action = set the bp of {this} to {bp}
+decisions.drug_demo.drug_prediction_v2.drugPredictorV2$002dP6DT.Input.bp#phrase.navigation = {bp} of {this}
+decisions.drug_demo.drug_prediction_v2.drugPredictorV2$002dP6DT.Input.gender#phrase.action = set the gender of {this} to {gender}
+decisions.drug_demo.drug_prediction_v2.drugPredictorV2$002dP6DT.Input.gender#phrase.navigation = {gender} of {this}
+
+# decisions.drug_demo.drug_prediction_v2.drugPredictorV2$002dP6DT.Output
+decisions.drug_demo.drug_prediction_v2.drugPredictorV2$002dP6DT.Output#concept.label = ML model output
+decisions.drug_demo.drug_prediction_v2.drugPredictorV2$002dP6DT.Output.Output(java.lang.String,java.lang.String,boolean,java.lang.String,java.lang.Double,java.lang.Double)#phrase.navigation = a new {ML model output} where {0, error code} {1, error message} {2, in error} {3, prediction} {4, probability} {5, probability} 
+decisions.drug_demo.drug_prediction_v2.drugPredictorV2$002dP6DT.Output.errorCode#phrase.action = set the error code of {this} to {error code}
+decisions.drug_demo.drug_prediction_v2.drugPredictorV2$002dP6DT.Output.errorCode#phrase.navigation = {error code} of {this}
+decisions.drug_demo.drug_prediction_v2.drugPredictorV2$002dP6DT.Output.errorMessage#phrase.action = set the error message of {this} to {error message}
+decisions.drug_demo.drug_prediction_v2.drugPredictorV2$002dP6DT.Output.errorMessage#phrase.navigation = {error message} of {this}
+decisions.drug_demo.drug_prediction_v2.drugPredictorV2$002dP6DT.Output.inError#phrase.action = make it {in error} that {this} is in error
+decisions.drug_demo.drug_prediction_v2.drugPredictorV2$002dP6DT.Output.inError#phrase.navigation = {this} is in error
+decisions.drug_demo.drug_prediction_v2.drugPredictorV2$002dP6DT.Output.prediction#phrase.action = set the prediction of {this} to {prediction}
+decisions.drug_demo.drug_prediction_v2.drugPredictorV2$002dP6DT.Output.prediction#phrase.navigation = {prediction} of {this}
+decisions.drug_demo.drug_prediction_v2.drugPredictorV2$002dP6DT.Output.probability#phrase.action = set the probability of {this} to {probability}
+decisions.drug_demo.drug_prediction_v2.drugPredictorV2$002dP6DT.Output.probability#phrase.navigation = {probability} of {this}
+decisions.drug_demo.drug_prediction_v2.drugPredictorV2$002dP6DT.Output.run(decisions.drug_demo.drug_prediction_v2.drugPredictorV2$002dP6DT.Input)#phrase.navigation = predict({0})

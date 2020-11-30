@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Males Under 50 - P6</name>
+  <uuid>dc184809-eda2-413b-92fb-e5afddc99e7a</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if all of the following conditions are true : 
+    - the age of 'the patient' is less than 50
+    - the gender of 'the patient' is "M" 
+then  
+set decision to "P6" ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

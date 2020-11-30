@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Use P3</name>
+  <uuid>31a2c30b-dc33-4307-8c38-d7e3e84ecd19</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    'Model Selection' is "P3"
+then
+set decision to the drug predictor V2 P3 XGB computed from
+      Patient Details being 'the patient' ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

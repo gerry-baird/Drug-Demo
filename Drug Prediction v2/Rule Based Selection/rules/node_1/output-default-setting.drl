@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>output-default-setting</name>
+  <uuid>4e7e17fa-b7cf-4189-bb32-d33c16e69fc8</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set decision to a new Predictive Model Result where
+        the prediction is "hydroxychloroquine", 
+        the probability is 1 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

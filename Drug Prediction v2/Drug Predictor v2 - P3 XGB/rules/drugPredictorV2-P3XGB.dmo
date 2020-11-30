@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>drugPredictorV2-P3XGB</name>
+  <uuid>d1f350f0-345e-40a8-a109-461f73cd3578</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="Decisions" name="drugPredictorV2-P3XGB" namespace="">
+    <extensionElements>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <inputData id="input" name="Patient Details">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="PatientData" collection="false" name="Patient Details"/>
+            </initialization>
+        </extensionElements>
+        <variable id="input_ii" name="Patient Details" typeRef="PatientData"/>
+    </inputData>
+    <decision id="input-mapping" name="Input mapping">
+        <description>ML model input</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="PatientData" collection="false" name="Patient Details"/>
+                <output bomType="decisions.drug_demo.drug_prediction_v2.drugPredictorV2$002dP3XGB.Input" collection="false" name="Input mapping"/>
+                <rule defaultRule="false" href="input-mapping/Map%20Values.drl" kind="BusinessRule" name="Map Values"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="input_mapping_ii" name="Input mapping" typeRef="decisions.drug_demo.drug_prediction_v2.drugPredictorV2$002dP3XGB.Input"/>
+        <informationRequirement>
+            <requiredInput href="#input"/>
+        </informationRequirement>
+    </decision>
+    <decision id="output" name="ML model invocation">
+        <description>ML model output</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="decisions.drug_demo.drug_prediction_v2.drugPredictorV2$002dP3XGB.Input" collection="false" name="Input mapping"/>
+                <output bomType="decisions.drug_demo.drug_prediction_v2.drugPredictorV2$002dP3XGB.Output" collection="false" name="ML model invocation"/>
+                <rule defaultRule="false" href="drugPredictorV2-P3XGB.drl" kind="BusinessRule" name="Prediction"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="output_ii" name="ML model invocation" typeRef="decisions.drug_demo.drug_prediction_v2.drugPredictorV2$002dP3XGB.Output"/>
+        <informationRequirement>
+            <requiredInput href="#input-mapping"/>
+        </informationRequirement>
+    </decision>
+    <decision id="output-mapping" name="Output mapping">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="decisions.drug_demo.drug_prediction_v2.drugPredictorV2$002dP3XGB.Output" collection="false" name="ML model invocation"/>
+                <output bomType="PredictiveModelResult" collection="false" name="Output mapping"/>
+                <rule defaultRule="false" href="output-mapping/Map%20to%20Output.drl" kind="BusinessRule" name="Map to Output"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="output_mapping_ii" name="Output mapping" typeRef="PredictiveModelResult"/>
+        <informationRequirement>
+            <requiredInput href="#output"/>
+        </informationRequirement>
+    </decision>
+</definitions></definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

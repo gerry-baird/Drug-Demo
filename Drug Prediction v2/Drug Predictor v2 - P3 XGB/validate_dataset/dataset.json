@@ -1,0 +1,8 @@
+{
+  "patientDetails": {
+    "age": 72,
+    "bmi": 12,
+    "bp": "L",
+    "gender": "F"
+  }
+}

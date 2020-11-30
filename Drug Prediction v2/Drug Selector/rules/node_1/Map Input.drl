@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Map Input</name>
+  <uuid>d006238c-24ab-40fa-9343-45a30d23f12d</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set decision to a new Patient Data where
+        the age is Age, 
+        the bp is BP, 
+        the gender is Gender, 
+        the bmi is BMI ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>
