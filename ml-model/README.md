@@ -7,17 +7,29 @@ There is a notebook here that shows how a decision tree could be trained using P
 It contains a visualisation of the decision tree but this was not used in ADS. 
 
 ## AutoAI
-It is assumed you have an IBM Cloud Account and that you've provisioned Watson Studio and Watson ML sevices.
+It is assumed you have an IBM Cloud Account and that you've provisioned Watson Studio and 
+Watson ML sevices, or you know how to.
 
-_Create Project_
+The steps to create and run the Auto AI experiment are quite straightforward.
 
-![](images/create_project.jpg)
+I've created a short video showing
 
-The 
+1. Creating a Project.
+2. Creating an Auto AI experiment
+3. Configuring and running the experiment
+4. Deploying the ML models
 
-_Create Deployment Space_
+The video is here on You Tube and its about 7 mins.
 
-_Create Auto AI Experiment_
+https://youtu.be/YPYsgmAAwxQ
+
+![](images/Auto_AI.jpg)
+
+
+
+
+
+
 
 
 
