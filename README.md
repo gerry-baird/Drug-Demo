@@ -14,3 +14,6 @@ The data directory contains the data files used to train the model and explains 
 The ml-model directory summarises the steps used to create the ML models integrated into ADS using Watson AutoAI. There 
 is also a Jupyter notebook showing model development in Python (this is a simpler model than those 
 generated from AutoAI) 
+
+## ADS 
+Instructions for adding the ML Models to ADS.
