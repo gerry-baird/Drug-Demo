@@ -21,7 +21,7 @@ I've created a short video showing
 
 The video is here on You Tube and its about 7 mins.
 
-https://youtu.be/YPYsgmAAwxQ
+A new version of the video is almost ready....
 
 ![](images/Auto_AI.jpg)
 
