@@ -17,7 +17,8 @@ I've created a short video showing
 1. Creating a Project.
 2. Creating an Auto AI experiment
 3. Configuring and running the experiment
-4. Deploying the ML models
+4. Deploying the ML model
+5. Testing the ML model
 
 The video is here on You Tube and its about 7 mins.
 
