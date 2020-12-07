@@ -3,7 +3,7 @@ connect ADS to the Watson ML Deployment Space we created earlier.
 
 First we need to create a new machine learning provider, here is the configuration screen:
 
-![](images/ml_config.jpg) 
+![](images/ML_config.jpg) 
 
 We need the following details :
 1. An API key
