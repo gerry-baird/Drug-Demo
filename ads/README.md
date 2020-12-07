@@ -1,5 +1,13 @@
- ## Configuration
- To use the Watson ML predictive models in ADS we need to do a bit of configuration to 
+There are a number of steps to complete before the ML model runs within an ADS
+decision service. These are the steps, there are video walk-throughs for each on YouTube :
+1. Configuration (4 mins)
+2. Integration (13 mins)
+3. Combining with rules (9 mins)
+4. Using Multiple Models with Guardrails
+
+ 
+## Configuration
+To use the Watson ML predictive models in ADS we need to do a bit of configuration to 
 connect ADS to the Watson ML Deployment Space we created earlier.
 
 First we need to create a new machine learning provider, here is the configuration screen:
@@ -22,7 +30,7 @@ Here is a list of Watson URL's : https://cloud.ibm.com/apidocs/machine-learning#
 
 ## Integrating ADS and Watson ML
 
-Now ADS is configured to use our Watson ML service as an ML provider we can do the integration.
+With ADS configured to use our Watson ML service as an ML provider we can do the integration.
 
 The basic steps are :
 1. Generate the mappings between ADS and Watson ML
@@ -30,6 +38,21 @@ The basic steps are :
 3. Configure the input mapping rules
 4. Configure the output mapping rules
 
-There is a walkthrough of these steps on YouTube here : https://youtu.be/go9Y828-1DM
+There is a walk-through of these steps on YouTube here : https://youtu.be/go9Y828-1DM
 
-## Using a Predictive Model in ADS 
+## Using an ML Model in ADS 
+We can now use the model within a decision service and choose to call it. To do this we need to:
+
+1. Define our input parameters
+2. Populate the data sent to the model
+3. Decide if we'll use the model or a default
+4. Output the final result based on the model or a default.
+
+There is a walk-through of these steps on YouTube here : https://youtu.be/ZNtYuX1POHg
+
+## Multiple Models and Guardrails
+This is the last step, here we can select one of mulitple models, either predictive or 
+prescriptive, check the parameters we valid, check the confidence is high enough to give
+a prediction.
+
+The video for this is here : 
