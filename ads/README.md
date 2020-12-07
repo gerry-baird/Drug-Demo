@@ -51,8 +51,8 @@ We can now use the model within a decision service and choose to call it. To do 
 There is a walk-through of these steps on YouTube here : https://youtu.be/ZNtYuX1POHg
 
 ## Multiple Models and Guardrails
-This is the last step, here we can select one of mulitple models, either predictive or 
+This is the last step, here we can select one of multiple models, either predictive or 
 prescriptive, check the parameters we valid, check the confidence is high enough to give
 a prediction.
 
-The video for this is here : 
+The video for this is here : https://youtu.be/GPU9-M7B7Xo
