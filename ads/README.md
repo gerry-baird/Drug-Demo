@@ -1,7 +1,7 @@
 To use the Watson ML predictive models in ADS we need to do a bit of configuration to 
 connect ADS to the Watson ML Deployment Space we created earlier.
 
-First we need to create a new machine learning provider, her is the configuration screen:
+First we need to create a new machine learning provider, here is the configuration screen:
 
 ![](images/ml_config.jpg) 
 
