@@ -1,4 +1,5 @@
-To use the Watson ML predictive models in ADS we need to do a bit of configuration to 
+ ## Configuration
+ To use the Watson ML predictive models in ADS we need to do a bit of configuration to 
 connect ADS to the Watson ML Deployment Space we created earlier.
 
 First we need to create a new machine learning provider, here is the configuration screen:
@@ -17,8 +18,18 @@ URL for Watson ML depends on where your Watson instance lives.
 
 You can watch me setup this configuration on YouTube here: https://youtu.be/_25IEOPitgM
 
-
-
-
 Here is a list of Watson URL's : https://cloud.ibm.com/apidocs/machine-learning#endpoint-url 
 
+## Integrating ADS and Watson ML
+
+Now ADS is configured to use our Watson ML service as an ML provider we can do the integration.
+
+The basic steps are :
+1. Generate the mappings between ADS and Watson ML
+2. Define ADS data types for ML model input/output
+3. Configure the input mapping rules
+4. Configure the output mapping rules
+
+There is a walkthrough of these steps on YouTube here : https://youtu.be/go9Y828-1DM
+
+## Using a Predictive Model in ADS 
