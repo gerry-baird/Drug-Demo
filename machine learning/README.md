@@ -1,18 +1,15 @@
 # ML Models
 
-The models used in ADS were created using Watson AutoAI and deployed to WatsonML to make them available for execution.
+The models used by ADS in the demo were created using Watson Auto AI and deployed to 
+Watson ML.
 
 ## Example Notebook
-There is a notebook here that shows how a decision tree could be trained using Python and Sklearn. 
-It contains a visualisation of the decision tree but this was not used in ADS. 
+There is a notebook here (Drug v2.ipynb) that shows how a decision tree could be trained using Python and Sklearn. 
+It contains a visualisation of the decision tree but this model was not used in ADS. 
 
-## AutoAI
-It is assumed you have an IBM Cloud Account and that you've provisioned Watson Studio and 
-Watson ML sevices, or you know how to.
-
-The steps to create and run the Auto AI experiment are quite straightforward.
-
-I've created a short video showing
+## Auto AI
+The steps to create and run the Auto AI experiment are quite straightforward but I've 
+created a short video showing:
 
 1. Creating a Project.
 2. Creating an Auto AI experiment
@@ -25,6 +22,13 @@ The video is here on You Tube and its about 7 mins.
 https://youtu.be/CyC2admff7U
 
 ![](images/Auto_AI.jpg)
+
+It is assumed you have an IBM Cloud Account and that you've provisioned Watson Studio and 
+Watson ML sevices, or at least you know how to.
+
+AUto AI was able to encode the categorical data (gender & blood pressure), but if your data
+needs more work you might find it easier to do this using a notebook.2  
+
 
 
 

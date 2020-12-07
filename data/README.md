@@ -1,6 +1,4 @@
-# Drug Data
-
-This is generated data. I generated 100 rows of data at a time using a tool here https://www.generatedata.com
+The demo uses generated data. I generated 100 rows of data at a time using a tool here https://www.generatedata.com
 
 
 ![](images/generate_data.jpg)
@@ -12,7 +10,7 @@ The data looks like this :
 There's a few hundred rows of data that contain Age, Gender, Blood Pressure, BMI and Drug. 
 This data will be used to train and ML model to predict the value of the Drug column from the other values.
 
-The dataset was designed to have the following subgroups.These are the details that the ML model will try and learn.
+The dataset was designed to have the following partitions.These are the details that the ML model will try and learn.
 
 ![](images/data_design.jpg) 
 
