@@ -23,4 +23,4 @@ To import this into ADS clone this repo then zip the Drug Prediction v2 director
 zipped directory can be imported into your ADS project. 
 
 There is a playlist on YouTube with all the video walk-throughs 
-[here](https://www.youtube.com/playlist?list=PL6RX5hbcBrG44CXoRg7MPsJpcg9ezThD4)
+[here](https://www.youtube.com/playlist?list=PL6RX5hbcBrG44CXoRg7MPsJpcg9ezThD4).
