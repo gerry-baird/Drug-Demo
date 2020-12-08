@@ -15,9 +15,12 @@ but it does have a useful visualisation of a decision tree.
 Watson Auto AI is used to train & deploy the models used in the demo and there is a 
 YouTube video showing how to use Auto AI to train a drug predicton model.
 
-The ADS directory contains notes and video showing how to integrate the models from 
+The ADS directory contains notes and multiple videos showing how to integrate the models from 
 Watson Auto AI into ADS. 
 
 Finally, the Drug Prediction v2 directory contains the ADS decision solution I used in the demo. 
 To import this into ADS clone this repo then zip the Drug Prediction v2 directory. This 
 zipped directory can be imported into your ADS project. 
+
+There is a playlist on YouTube with all the video walk-throughs 
+[here](https://www.youtube.com/playlist?list=PL6RX5hbcBrG44CXoRg7MPsJpcg9ezThD4)

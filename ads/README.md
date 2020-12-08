@@ -1,10 +1,11 @@
 There are a number of steps to complete before the ML model runs within an ADS
-decision service. These are the steps, there are video walk-throughs for each on YouTube :
+decision service. These are the steps :
 1. Configuration (4 mins)
 2. Integration (13 mins)
 3. Combining with rules (9 mins)
-4. Using Multiple Models with Guardrails
+4. Using Multiple Models with Guardrails (9 mins)
 
+There are more details for each step below along with links to the accompanying video.
  
 ## Configuration
 To use the Watson ML predictive models in ADS we need to do a bit of configuration to 
@@ -24,9 +25,10 @@ Naturally, none of these things are in the same place. The API key is defined at
 account level. The space ID can be found in the settings tab of the deployment space and the 
 URL for Watson ML depends on where your Watson instance lives.
 
-You can watch me setup this configuration on YouTube here: https://youtu.be/_25IEOPitgM
+You can watch me perform this configuration on YouTube [here](https://youtu.be/_25IEOPitgM).
 
-Here is a list of Watson URL's : https://cloud.ibm.com/apidocs/machine-learning#endpoint-url 
+Here is the list of [Watson URL's](https://cloud.ibm.com/apidocs/machine-learning#endpoint-url) 
+I use in the video.
 
 ## Integrating ADS and Watson ML
 
@@ -38,21 +40,21 @@ The basic steps are :
 3. Configure the input mapping rules
 4. Configure the output mapping rules
 
-There is a walk-through of these steps on YouTube here : https://youtu.be/go9Y828-1DM
+There is a walk-through of these steps on YouTube [here](https://youtu.be/go9Y828-1DM).
 
 ## Using an ML Model in ADS 
-We can now use the model within a decision service and choose to call it. To do this we need to:
+We can now use the model within a decision service. To do this we need to:
 
 1. Define our input parameters
 2. Populate the data sent to the model
 3. Decide if we'll use the model or a default
 4. Output the final result based on the model or a default.
 
-There is a walk-through of these steps on YouTube here : https://youtu.be/ZNtYuX1POHg
+There is a walk-through of these steps on YouTube [here](https://youtu.be/ZNtYuX1POHg).
 
 ## Multiple Models and Guardrails
 This is the last step, here we can select one of multiple models, either predictive or 
-prescriptive, check the parameters we valid, check the confidence is high enough to give
-a prediction.
+prescriptive, check the parameters are valid, check the confidence from the model is high 
+enough to return the prediction.
 
-The video for this is here : https://youtu.be/GPU9-M7B7Xo
+The video for this is [here](https://youtu.be/GPU9-M7B7Xo).

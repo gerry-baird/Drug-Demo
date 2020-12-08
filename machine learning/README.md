@@ -17,17 +17,16 @@ created a short video showing:
 4. Deploying the ML model
 5. Testing the ML model
 
-The video is here on You Tube and its about 7 mins.
+The video is [here](https://youtu.be/CyC2admff7U) on You Tube and its about 7 mins.
 
-https://youtu.be/CyC2admff7U
 
 ![](images/Auto_AI.jpg)
 
-It is assumed you have an IBM Cloud Account and that you've provisioned Watson Studio and 
-Watson ML sevices, or at least you know how to.
+It is assumed you have an IBM Cloud Account and that you've provisioned a Watson Studio and 
+Watson ML service, or at least you know how to.
 
-AUto AI was able to encode the categorical data (gender & blood pressure), but if your data
-needs more work you might find it easier to do this using a notebook.2  
+Auto AI was able to encode the categorical data (gender & blood pressure), but if your data
+needs more work you might find it easier to do this using a notebook. 
 
 
 

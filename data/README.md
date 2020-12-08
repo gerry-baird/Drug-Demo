@@ -22,5 +22,5 @@ Using the data generator I created 100 rows at a time using the characteristics 
 to generate the data for Drug A, and called this file A.csv and downloaded this file. Then I repeated the exercise for 
 B,C,D,E. Finally, I created noise.csv
 
-Once all the files were downloaded I combined them into a single csv and shuffled it. The output from all this 
-is DrugV2Combined.csv which is provided here.   
+Once all the files were created I combined them into a single csv and shuffled it. The output from all this 
+is DrugV2Combined.csv which is provided in this folder.   
