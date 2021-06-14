@@ -9,9 +9,7 @@
   </paths>
   <paths xsi:type="ilog.rules.studio.model.bom:BOMPath" pathID="BOM">
     <entries xsi:type="ilog.rules.studio.model.bom:DecisionLibraryBOMEntry" name="decisions.drug_demo.drug_prediction_v2:drugModel#LATEST-SNAPSHOT" packageId="decisions.drug_demo.drug_prediction_v2:drugModel" version="LATEST-SNAPSHOT"/>
-    <entries xsi:type="ilog.rules.studio.model.bom:DecisionLibraryBOMEntry" name="decisions.drug_demo.drug_prediction_v2:ruleBasedSelection#LATEST-SNAPSHOT" packageId="decisions.drug_demo.drug_prediction_v2:ruleBasedSelection" version="LATEST-SNAPSHOT"/>
-    <entries xsi:type="ilog.rules.studio.model.bom:DecisionLibraryBOMEntry" name="decisions.drug_demo.drug_prediction_v2:drugPredictorV2-P3XGB#LATEST-SNAPSHOT" packageId="decisions.drug_demo.drug_prediction_v2:drugPredictorV2-P3XGB" version="LATEST-SNAPSHOT"/>
-    <entries xsi:type="ilog.rules.studio.model.bom:DecisionLibraryBOMEntry" name="decisions.drug_demo.drug_prediction_v2:drugPredictorV2-P6DT#LATEST-SNAPSHOT" packageId="decisions.drug_demo.drug_prediction_v2:drugPredictorV2-P6DT" version="LATEST-SNAPSHOT"/>
+    <entries xsi:type="ilog.rules.studio.model.bom:DecisionLibraryBOMEntry" name="decisions.drug_demo.drug_prediction_v2:drugP3XGB#LATEST-SNAPSHOT" packageId="decisions.drug_demo.drug_prediction_v2:drugP3XGB" version="LATEST-SNAPSHOT"/>
   </paths>
   <modelFolders xsi:type="ilog.rules.studio.model.base:SourceFolder">
     <name>rules</name>

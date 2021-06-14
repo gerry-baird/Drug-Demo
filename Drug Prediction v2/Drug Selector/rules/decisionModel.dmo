@@ -7,63 +7,6 @@
     <extensionElements>
         <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
     </extensionElements>
-    <inputData id="node_0" name="Age">
-        <extensionElements>
-            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
-                <output bomType="java.lang.Long" collection="false" name="Age"/>
-            </initialization>
-        </extensionElements>
-        <variable id="node_0_ii" name="Age" typeRef="java.lang.Long"/>
-    </inputData>
-    <decision id="node_1" name="Preapare Patient Data">
-        <extensionElements>
-            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
-                <input bomType="java.lang.Long" collection="false" name="Age"/>
-                <input bomType="java.lang.String" collection="false" name="Gender"/>
-                <input bomType="java.lang.String" collection="false" name="BP"/>
-                <input bomType="java.lang.Double" collection="false" name="BMI"/>
-                <output bomType="PatientData" collection="false" name="the patient"/>
-                <rule defaultRule="false" href="node_1/Map%20Input.drl" kind="BusinessRule" name="Map Input"/>
-            </ruleset>
-        </extensionElements>
-        <variable id="node_1_ii" name="Preapare Patient Data" typeRef="PatientData"/>
-        <informationRequirement>
-            <requiredInput href="#node_0"/>
-        </informationRequirement>
-        <informationRequirement>
-            <requiredInput href="#node_2"/>
-        </informationRequirement>
-        <informationRequirement>
-            <requiredInput href="#node_3"/>
-        </informationRequirement>
-        <informationRequirement>
-            <requiredInput href="#node_4"/>
-        </informationRequirement>
-    </decision>
-    <inputData id="node_2" name="Gender">
-        <extensionElements>
-            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
-                <output bomType="java.lang.String" collection="false" name="Gender"/>
-            </initialization>
-        </extensionElements>
-        <variable id="node_2_ii" name="Gender" typeRef="java.lang.String"/>
-    </inputData>
-    <inputData id="node_3" name="BP">
-        <extensionElements>
-            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
-                <output bomType="java.lang.String" collection="false" name="BP"/>
-            </initialization>
-        </extensionElements>
-        <variable id="node_3_ii" name="BP" typeRef="java.lang.String"/>
-    </inputData>
-    <inputData id="node_4" name="BMI">
-        <extensionElements>
-            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
-                <output bomType="java.lang.Double" collection="false" name="BMI"/>
-            </initialization>
-        </extensionElements>
-        <variable id="node_4_ii" name="BMI" typeRef="java.lang.Double"/>
-    </inputData>
     <decision id="node_5" name="Valid Data">
         <extensionElements>
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
@@ -74,14 +17,14 @@
         </extensionElements>
         <variable id="node_5_ii" name="Valid Data" typeRef="java.lang.Boolean"/>
         <informationRequirement>
-            <requiredInput href="#node_1"/>
+            <requiredInput href="#node_10"/>
         </informationRequirement>
     </decision>
     <decision id="node_6" name="Drug Type">
         <extensionElements>
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="first">
                 <input bomType="java.lang.Boolean" collection="false" name="Valid Data"/>
-                <input bomType="PredictiveModelResult" collection="false" name="model results"/>
+                <input bomType="DrugPredictiveModelResult" collection="false" name="model results"/>
                 <output bomType="java.lang.String" collection="false" name="Drug Type"/>
                 <rule defaultRule="false" href="node_6/Invalid%20Data.drl" kind="BusinessRule" name="Invalid Data"/>
                 <rule defaultRule="false" href="node_6/Use%20Model%20Results.drl" kind="BusinessRule" name="Use Model Results"/>
@@ -108,96 +51,51 @@
         </extensionElements>
         <variable id="node_7_ii" name="Model Selection" typeRef="java.lang.String"/>
         <informationRequirement>
-            <requiredInput href="#node_1"/>
+            <requiredInput href="#node_10"/>
         </informationRequirement>
     </decision>
     <decision id="node_8" name="Execute Model">
         <extensionElements>
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
-                <input bomType="PatientData" collection="false" name="the patient"/>
                 <input bomType="java.lang.String" collection="false" name="Model Selection"/>
-                <output bomType="PredictiveModelResult" collection="false" name="model results"/>
-                <rule defaultRule="false" href="node_8/Use%20Rules.drl" kind="BusinessRule" name="Use Rules"/>
-                <rule defaultRule="false" href="node_8/Use%20P6.drl" kind="BusinessRule" name="Use P6"/>
+                <input bomType="PatientData" collection="false" name="the patient"/>
+                <output bomType="DrugPredictiveModelResult" collection="false" name="model results"/>
                 <rule defaultRule="false" href="node_8/Use%20P3.drl" kind="BusinessRule" name="Use P3"/>
             </ruleset>
         </extensionElements>
-        <variable id="node_8_ii" name="Execute Model" typeRef="PredictiveModelResult"/>
-        <informationRequirement>
-            <requiredInput href="#node_1"/>
-        </informationRequirement>
+        <variable id="node_8_ii" name="Execute Model" typeRef="DrugPredictiveModelResult"/>
         <informationRequirement>
             <requiredInput href="#node_7"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_10"/>
         </informationRequirement>
         <knowledgeRequirement>
             <requiredKnowledge href="#node_11"/>
         </knowledgeRequirement>
-        <knowledgeRequirement>
-            <requiredKnowledge href="#node_10"/>
-        </knowledgeRequirement>
-        <knowledgeRequirement>
-            <requiredKnowledge href="#node_9"/>
-        </knowledgeRequirement>
     </decision>
-    <businessKnowledgeModel id="node_9" name="Rule Based Selection">
-        <variable name="Rule Based Selection" typeRef="PredictiveModelResult"/>
-        <encapsulatedLogic typeRef="PredictiveModelResult">
-            <formalParameter name="patientDetails" typeRef="PatientData"/>
-            <context>
-                <contextEntry>
-                    <variable name="class"/>
-                    <literalExpression>
-                        <text>"decisions.drug_demo.drug_prediction_v2.rulebasedselection.RuleBasedSelection"</text>
-                    </literalExpression>
-                </contextEntry>
-                <contextEntry>
-                    <variable name="method signature"/>
-                    <literalExpression>
-                        <text>"run(PatientData)"</text>
-                    </literalExpression>
-                </contextEntry>
-            </context>
-        </encapsulatedLogic>
-    </businessKnowledgeModel>
-    <businessKnowledgeModel id="node_10" name="Drug Predictor v2 - P3 XGB">
+    <inputData id="node_10" name="Patient Details">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="PatientData" collection="false" name="the patient"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_10_ii" name="Patient Details" typeRef="PatientData"/>
+    </inputData>
+    <businessKnowledgeModel id="node_11" name="Drug P3 XGB">
         <extensionElements>
             <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
-                <property name="ads.designer.prediction"><![CDATA[true]]></property>
+                <property name="ads.designer.bkKind"><![CDATA[prediction]]></property>
             </properties>
         </extensionElements>
-        <variable name="Drug Predictor v2 - P3 XGB" typeRef="PredictiveModelResult"/>
-        <encapsulatedLogic typeRef="PredictiveModelResult">
-            <formalParameter name="patientDetails" typeRef="PatientData"/>
+        <variable name="Drug P3 XGB" typeRef="decisions.drug_demo.drug_prediction_v2.drugP3XGB.Output"/>
+        <encapsulatedLogic typeRef="decisions.drug_demo.drug_prediction_v2.drugP3XGB.Output">
+            <formalParameter name="thePatient" typeRef="PatientData"/>
             <context>
                 <contextEntry>
                     <variable name="class"/>
                     <literalExpression>
-                        <text>"decisions.drug_demo.drug_prediction_v2.drugPredictorV2$002dP3XGB.DrugPredictorV2_P3XGB"</text>
-                    </literalExpression>
-                </contextEntry>
-                <contextEntry>
-                    <variable name="method signature"/>
-                    <literalExpression>
-                        <text>"run(PatientData)"</text>
-                    </literalExpression>
-                </contextEntry>
-            </context>
-        </encapsulatedLogic>
-    </businessKnowledgeModel>
-    <businessKnowledgeModel id="node_11" name="Drug Predictor v2 - P6 DT">
-        <extensionElements>
-            <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
-                <property name="ads.designer.prediction"><![CDATA[true]]></property>
-            </properties>
-        </extensionElements>
-        <variable name="Drug Predictor v2 - P6 DT" typeRef="PredictiveModelResult"/>
-        <encapsulatedLogic typeRef="PredictiveModelResult">
-            <formalParameter name="patientDetails" typeRef="PatientData"/>
-            <context>
-                <contextEntry>
-                    <variable name="class"/>
-                    <literalExpression>
-                        <text>"decisions.drug_demo.drug_prediction_v2.drugPredictorV2$002dP6DT.DrugPredictorV2_P6DT"</text>
+                        <text>"decisions.drug_demo.drug_prediction_v2.drugP3XGB.DrugP3XGB"</text>
                     </literalExpression>
                 </contextEntry>
                 <contextEntry>
