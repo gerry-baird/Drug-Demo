@@ -1,0 +1,8 @@
+{
+  "thePatient": {
+    "age": 24,
+    "bmi": 25,
+    "bp": "L",
+    "gender": "M"
+  }
+}

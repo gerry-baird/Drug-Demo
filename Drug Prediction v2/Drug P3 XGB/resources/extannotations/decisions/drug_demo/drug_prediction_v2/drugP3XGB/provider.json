@@ -1,0 +1,9 @@
+{
+  "name" : "decisions/Drug-Demo/Gerrys ML Deployment1623664114130",
+  "type" : "WML",
+  "description" : "",
+  "mlUrl" : "https://eu-gb.ml.cloud.ibm.com",
+  "authUrl" : "https://iam.bluemix.net/identity/token",
+  "instanceId" : "31b44df7-2390-4375-88a2-65427c2faa6a",
+  "apiKey" : null
+}
